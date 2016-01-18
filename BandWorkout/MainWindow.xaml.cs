@@ -50,7 +50,7 @@ namespace BandWorkout
             {
                 ItemsSource = SummaryList,
                 XBindingPath = "Date",
-                YBindingPath = "TotalCalories",
+                YBindingPath = "Distance",
                 EnableAnimation = true,
                 ShowTooltip = true
             };
@@ -109,7 +109,8 @@ namespace BandWorkout
             {
                 var summary = new BandSummary();
                 summary.StepCount = summaryJson["stepsTaken"]?.Value<int>() ?? 0;
-                summary.TotalCalories = summaryJson["caloriesBurnedSummary"]["totalCalories"]?.Value<int>() ?? 0;
+                // summary.TotalCalories = summaryJson["caloriesBurnedSummary"]["totalCalories"]?.Value<int>() ?? 0;
+                summary.Distance = summaryJson["distanceSummary"]["totalDistanceOnFoot"]?.Value<double>() / 100 ?? 0.0; // Distance is in cm, convert to m
                 summary.Date = summaryJson["parentDay"].Value<DateTime>();
                 SummaryList.Insert(0, summary);
             }

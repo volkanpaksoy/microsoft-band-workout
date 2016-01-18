@@ -47,7 +47,7 @@
 
             <chart:SfChart.SecondaryAxis>
                 <chart:NumericalAxis FontSize="20" Minimum="0" Maximum="25000" Interval="500"  
-                                     Header="Step Count" Foreground="Black"
+                                     Header="Step Count and Distance" Foreground="Black"
                                      LabelTemplate="{StaticResource labelTemplate}" 
                                      AxisLineStyle="{StaticResource AxisStyle}"
                                      MajorTickLineStyle="{StaticResource AxisStyle}"/>

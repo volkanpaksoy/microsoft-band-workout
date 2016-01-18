@@ -10,6 +10,7 @@ namespace BandWorkout
     {
         public int StepCount { get; set; }
         public int TotalCalories { get; set; }
+        public double Distance { get; set; }
         public DateTime Date { get; set; }
     }
 }
